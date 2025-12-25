@@ -1,0 +1,81 @@
+<!DOCTYPE html> <!-- Anger att dokumentet använder HTML5-standarden -->
+
+<html lang="sv"> <!-- Start på HTML-dokumentet, språk svenska -->
+
+<head> <!-- Metadata och inställningar för sidan -->
+  <meta charset="UTF-8"> <!-- Teckenkodning, stödjer svenska tecken som å, ä, ö -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Gör sidan responsiv på mobil och surfplatta -->
+  <title>Contact - MrCake</title> <!-- Titel som visas i webbläsarens flik -->
+  <link rel="stylesheet" href="css/style.css"> <!-- Länkar till extern CSS-fil för styling -->
+</head>
+
+<body> <!-- Allt innehåll som visas på webbsidan -->
+
+<!-- Header -->
+<header class="site-header"> <!-- Sidhuvud -->
+  <nav class="navbar"> <!-- Navigeringsmeny -->
+    <a href="index.html" class="brand"> <!-- Länk till startsidan -->
+      <img src="images/logo.png" alt="MrCake Logo" class="logo"> <!-- Logotypbild med alternativ text -->
+    </a>
+    <ul class="nav-links"> <!-- Oordnad lista med navigeringslänkar -->
+      <li><a href="index.html">Home</a></li> <!-- Länk till startsidan -->
+      <li><a href="about.html">About</a></li> <!-- Länk till "About"-sidan -->
+      <li><a href="products.html">Products</a></li> <!-- Länk till produktsidan -->
+      <li><a href="contact.html">Contact</a></li> <!-- Länk till kontaktsidan -->
+      <li><a href="sweet_christmas.html">Sweet Christmas</a></li> <!-- Länk till julspecial-sidan -->
+    </ul>
+  </nav>
+</header>
+
+<main> <!-- Huvudinnehållet på sidan -->
+  <!-- Kontaktformulär -->
+  <section class="contact-container"> <!-- Behållare för kontaktformulär och info -->
+    <section class="contact-form-section"> <!-- Sektion med själva kontaktformuläret -->
+      <h2>Contact Us</h2> <!-- Rubrik för formuläret -->
+      <form id="contactForm" class="contact-form"> <!-- Formulär med ID för JavaScript -->
+        <label> <!-- Etikett för namn -->
+          Name
+          <input type="text" name="name" placeholder="Your name" required> <!-- Textfält för namn, måste fyllas i -->
+        </label>
+
+        <label> <!-- Etikett för e-post -->
+          Email
+          <input type="email" name="email" placeholder="Your email" required> <!-- E-postfält, måste fyllas i och vara korrekt formaterat -->
+        </label>
+
+        <label> <!-- Etikett för meddelande -->
+          Message
+          <textarea name="message" placeholder="Your message" required></textarea> <!-- Textarea för meddelande, måste fyllas i -->
+        </label>
+
+        <button type="submit">Send Message</button> <!-- Skickar formuläret när användaren klickar -->
+      </form>    
+    </section>
+
+    <!-- Info-sektion -->
+    <section class="contact-info"> <!-- Sektion med kontakt- och leveransinformation -->
+      <h2>Delivery & Pickup Information</h2> <!-- Rubrik -->
+      <p><strong>Home delivery service:</strong><br>All the city of Stockholm and Malmö with additional cost.</p> <!-- Leveransinfo med fet rubrik och radbrytning -->
+      <p><strong>Pick up location:</strong><br>Via la Costa Avenue, Blue Port gated neighbourhood.<br>GPS location will be sent via WhatsApp.</p> <!-- Hämtning info med radbrytningar -->
+      <p><strong>Order policy:</strong><br>Orders must be placed at least 2 days in advance for availability and preparation.</p> <!-- Beställningspolicy -->
+      <p><strong>Opening hours:</strong><br>Tuesday – Saturday<br>9:00 a.m. – 2:00 p.m.</p> <!-- Öppettider med radbrytningar -->
+    </section>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer> <!-- Sidfot -->
+  <p>Follow us:</p> <!-- Text i footern -->
+  <div class="social-links"> <!-- Sociala medier-länkar -->
+    <a href="https://www.instagram.com/" target="_blank">Instagram</a> | <!-- Länk till Instagram, öppnas i ny flik -->
+    <a href="https://www.facebook.com/" target="_blank">Facebook</a> | <!-- Länk till Facebook -->
+    <a href="mailto:info@sweetdreams.com">Email</a> <!-- E-postlänk -->
+  </div>
+  <span class="copyright">© 2025 MR Cake AB</span> <!-- Copyright-information -->
+</footer>
+
+<!-- JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script> <!-- Laddar EmailJS-biblioteket -->
+<script src="js/script.js"></script> <!-- Länkar till din egna JavaScript-fil där formuläret hanteras -->
+</body>
+</html>

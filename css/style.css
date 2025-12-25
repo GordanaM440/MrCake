@@ -1,0 +1,471 @@
+/* =========================
+   GLOBAL
+========================= */
+* {
+  box-sizing: border-box; /* Alla element inkluderar padding och border i elementets totala storlek */
+}
+
+body {
+  margin: 0;  /* Tar bort standardmarginalen från body */
+  font-family: 'Montserrat', sans-serif; /* Sätter standardfont för hela sidan */
+  font-size: 18px; /* Grundstorlek för text */
+  line-height: 1.6; /* Radavstånd */
+  background-color: #f5f5f5; /* Ljusgrå bakgrundsfärg */
+  color: #333;  /* Standard textfärg */
+}
+
+img {
+  max-width: 100%; /* Bilder skalar inte utanför sin container */
+  display: block; /* Tar bort mellanslag under bilden */
+}
+
+/* =========================
+   LINKS
+========================= */
+a {
+  color: #e91e63;  /* Standardfärg för länkar */
+  text-decoration: none; /* Tar bort understrykning */
+}
+
+a:hover {
+  color: #c2185b;  /* Ändrar färg när musen hovrar över länken */
+}
+
+/* =========================
+   HEADER / NAVBAR
+========================= */
+.site-header {
+  background-color: #fff3f6; /* Bakgrundsfärg för sidhuvudet */
+  border-bottom: 2px solid #f2c6d0;  /* Understrykning med rosa nyans */
+}
+
+.navbar {
+  max-width: 1100px;   /* Maximal bredd på navigationen */
+  margin: 0 auto;    /* Centrerar navbaren horisontellt */
+  padding: 15px 20px;   /* Inre marginal */
+  display: flex;   /* Flexbox-layout */
+  justify-content: space-between;   /* Sprider ut logotyp och länkar */
+  align-items: center;   /* Vertikal centrering */
+}
+
+.logo {
+  width: 400px;    /* Logotypens bredd */
+  background-color:#e91e63;   /* Bakgrundsfärg på logotypcontainer */
+}
+
+.nav-links {
+  list-style: none;   /* Tar bort punkter från listan */
+  display: flex;   /* Flexbox för länkarna */
+  gap: 20px;   /* Avstånd mellan länkarna */
+  padding: 0;   /* Tar bort inre marginal */
+  margin: 0;    /* Tar bort yttre marginal */
+}
+
+.nav-links a {
+  font-weight: 600;  /* Fet text för navigationslänkar */
+  color: #5a2a33;   /* Länkfärg */
+}
+
+.nav-links a:hover {
+  border-bottom: 2px solid #e91e63;  /* Understrykning på hovring */
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  padding: 70px 20px;    /* Avstånd runt hero-sektionen */
+  background-color: #ffe4e1;  /* Ljusrosa bakgrund */
+  text-align: center;  /* Centrerar text */
+}
+
+.hero h1 {
+  color: #e91e63; /* Rosa rubrikfärg */
+  margin-bottom: 20px;   /* Avstånd under rubriken */
+}
+
+.hero p {
+  max-width: 800px;   /* Maximal bredd på texten */
+  margin: 0 auto;    /* Centrerar texten horisontellt */
+}
+
+/* =========================
+   TORTA
+========================= */
+.torta-section {
+  padding: 60px 20px;   /* Avstånd runt sektionen */
+}
+
+.torta-img {
+  max-width: 1100px;   /* Maximal bredd på bilder */
+  margin: 0 auto;   /* Centrerar horisontellt */
+  display: flex;   /* Flex-layout */
+  justify-content: center;  /* Centrerar innehållet */
+}
+
+/* =========================
+   PRODUCTS GRID
+========================= */
+.products-section {
+  margin: 60px 20px;  /* Avstånd runt produktsidan */
+}
+
+.products-section h2 {
+  text-align: center;  /* Centrerar rubrik */
+  color: #e91e63;   /* Rubrikfärg */
+  margin-bottom: 30px;   /* Avstånd under rubrik */
+}
+
+.products {
+  max-width: 1100px;  /* Maxbredd på produktgalleriet */
+  margin: 0 auto;   /* Centrerar galleriet */
+  display: grid;   /* Skapar grid-layout */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));   /* Flexibel kolumnbredd */
+  gap: 25px;    /* Avstånd mellan produkterna */
+}
+
+.product {
+  background: #fff;   /* Vit bakgrund på produktkort */
+  border-radius: 12px;  /* Rundade hörn */
+  padding: 15px;   /* Inre marginal */
+  text-align: center;  /* Centrerar text */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);  /* Skugga runt kortet */
+  transition: transform 0.2s;   /* Lätt animation vid hovring */
+}
+
+.product:hover {
+  transform: translateY(-5px);    /* Lyfter kortet lite när musen hovrar */
+}
+
+.product img {
+  border-radius: 8px;   /* Rundar hörnen på produktbilder */
+  margin-bottom: 10px;   /* Avstånd under bilden */
+}
+
+/* =========================
+   PRODUCT DETAIL (happy / christmas / chocolate)
+========================= */
+.happy-section-1,
+.christmas-section-1,
+.chockolate-section-1 {
+  padding: 80px 12%;  /* Avstånd runt detaljsidor */
+  background-color: #faf6f2;  /* Ljus bakgrund */
+}
+
+.happy-container-1,
+.christmas-container-1,
+.chockolate-container-1 {
+  max-width: 1200px;  /* Maxbredd på container */
+  margin: 0 auto;   /* Centrerar container */
+  display: flex;   /* Flexbox-layout */
+  gap: 60px;   /* Avstånd mellan bild och text */
+  align-items: flex-start;    /* Top-alignment */
+}
+
+.happy-image-1 img,
+.christmas-image-1 img,
+.chockolate-image-1 img {
+  max-width: 420px;   /* Maxbredd på produktbilder */
+  border-radius: 14px;    /* Rundade hörn */
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);    /* Skugga under bilderna */
+}
+
+.happy-text-1 h2,
+.christmas-text-1 h2,
+.chockolate-text-1 h2 {
+  font-size: 2.2rem;   /* Stor rubriktext */
+  margin-bottom: 20px;   /* Avstånd under rubrik */
+}
+
+.happy-text-1 p,
+.christmas-text-1 p,
+.chockolate-text-1 p {
+  margin-bottom: 15px;  /* Avstånd mellan stycken */
+  color: #555;   /* Textfärg */
+}
+
+/* =========================
+   SUBSCRIBE
+========================= */
+.subscribe-section {
+  max-width: 600px; /* Maxbredd på subscribe-box */
+  margin: 60px auto;  /* Centrerar boxen med avstånd */
+  padding: 35px;   /* Inre marginal */
+  background-color: #ffe4e1;  /* Ljusrosa bakgrund */
+  border-radius: 14px;   /* Rundade hörn */
+  text-align: center;  /* Centrerar text */
+}
+
+.subscribe-form {
+  display: flex;   /* Flexbox-layout för formulär */
+  gap: 10px;    /* Avstånd mellan fält och knapp */
+  margin-top: 20px;   /* Avstånd ovanför formuläret */
+}
+
+.subscribe-form input {
+  flex: 1;  /* Tar upp all tillgänglig plats */
+  padding: 12px;  /* Inre marginal */
+  border-radius: 8px;   /* Rundade hörn */
+  border: 1px solid #ccc;  /* Ljusgrå kant */
+}
+
+.subscribe-form button {
+  padding: 12px 20px;   /* Inre marginal */
+  border: none;   /* Ingen kant */
+  border-radius: 8px;  /* Rundade hörn */
+  background-color: #e91e63;  /* Rosa bakgrund */
+  color: #fff;   /* Vit text */
+  font-weight: bold;   /* Fet text */
+  cursor: pointer;   /* Visar pekande hand */
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background-color: #f5f5f5;  /* Ljus bakgrund */
+  padding: 30px 20px;   /* Inre marginal */
+  text-align: center;   /* Centrerar text */
+  border-top: 2px solid #ddd;   /* Kant på toppen */
+  font-size: 14px;   /* Mindre textstorlek */
+}
+
+footer .social-links a {
+  margin: 0 8px;   /* Avstånd mellan sociala länkar */
+  color: #555;   /* Länkfärg */
+}
+
+footer .social-links a:hover {
+  color: #e91e63;   /* Länkfärg vid hovring */
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 900px) {  /* Responsiv styling för skärmar mindre än 900px */
+
+  .navbar {
+    flex-direction: column;   /* Staplar navbaren vertikalt */
+    gap: 15px;    /* Avstånd mellan element */
+  }
+
+  .nav-links {
+    flex-direction: column;  /* Staplar navigationslänkar vertikalt */
+    align-items: center;   /* Centrerar länkar */
+  }
+
+  .happy-container-1,
+  .christmas-container-1,
+  .chockolate-container-1 {
+    flex-direction: column;  /* Staplar produktbilder och text vertikalt */
+    text-align: center;   /* Centrerar text */
+  }
+
+  .subscribe-form {
+    flex-direction: column;   /* Staplar input och knapp vertikalt */
+  }
+}
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.abt-sec-1 {
+  padding: 80px 20px;  /* Avstånd runt hela About-sektionen */
+  background-color: #faf6f2;   /* Ljus bakgrundsfärg */
+}
+
+/* Container: text + bild bredvid varandra */
+.abt-con {
+  max-width: 1200px;   /* Maximal bredd på container */
+  margin: 0 auto;  /* Centrerar container horisontellt */
+  display: flex;    /* Flexbox-layout för att ha text + bild bredvid varandra */
+  gap: 60px;   /* Avstånd mellan text och bild */
+  align-items: center;   /* Vertikal centrering av innehåll */
+}
+
+/* TEXT */
+.abt-text {
+  flex: 1;   /* Tar upp lika mycket plats som bildens container */
+}
+
+.abt-text h2 {
+  font-size: 2.2rem;  /* Stor rubriktext */
+  margin-bottom: 20px;  /* Avstånd under rubrik */
+  color: #2a2a2a;  /* Mörk textfärg */
+}
+
+.abt-text p {
+  font-size: 1.05rem;  /* Normal textstorlek */
+  line-height: 1.8;    /* Radavstånd */
+  color: #555;   /* Mörkgrå textfärg */
+  margin-bottom: 16px;   /* Avstånd mellan stycken */
+}
+
+/* BILD */
+.abt-img {
+  flex: 1;   /* Tar upp lika mycket plats som texten */
+  display: flex;   /* Flexbox-layout */
+  justify-content: center;   /* Centrerar bilden horisontellt */
+}
+
+.abt-img img {
+  width: 100%;   /* Bilden fyller hela sin container */
+  max-width: 420px;  /* Maxbredd för bilden */
+  border-radius: 14px;    /* Rundade hörn */
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);    /* Skugga under bilden */
+}
+
+/* =========================
+   MOBIL
+========================= */
+@media (max-width: 900px) {
+  .abt-con {
+    flex-direction: column;   /* Staplar text och bild vertikalt på små skärmar */
+    text-align: center;  /* Centrerar text */
+  }
+
+  .abt-img img {
+    max-width: 100%;   /* Bilden kan nu fylla hela bredden på mobilen */
+  }
+}
+
+/* =========================
+   CONTACT PAGE – MODERN
+========================= */
+
+.contact-container {
+  max-width: 1200px;   /* Maxbredd på kontaktsektionen */
+  margin: 80px auto;    /* Centrerar container med avstånd ovan och under */
+  padding: 0 20px;   /* Horisontell padding */
+  display: flex;   /* Flexbox-layout för formulär + info */
+  gap: 60px;  /* Avstånd mellan formulär och info */
+  align-items: flex-start;  /* Top-alignment */
+}
+
+/* =========================
+   FORM SECTION
+========================= */
+
+.contact-form-section {
+  flex: 1;  /* Tar upp lika mycket plats som info-sektionen */
+  background-color: #ffffff;   /* Vit bakgrund */
+  padding: 40px;  /* Inre marginal */
+  border-radius: 18px;  /* Rundade hörn */
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);   /* Lätt skugga runt formuläret */
+}
+
+.contact-form-section h2 {
+  text-align: center;    /* Centrerar rubriken */
+  margin-bottom: 30px;   /* Avstånd under rubrik */
+  color: #e91e63;    /* Rosa rubrikfärg */
+  font-size: 2rem;    /* Rubrikstorlek */
+}
+
+/* FORM */
+.contact-form label {
+  display: block;   /* Varje label på egen rad */
+  font-size: 0.95rem;    /* Textstorlek */
+  font-weight: 600;   /* Fet text */
+  color: #444;    /* Mörk textfärg */
+  margin-bottom: 18px;   /* Avstånd under label */
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;   /* Fyller hela bredden */
+  margin-top: 6px;   /* Litet avstånd ovanför fältet */
+  padding: 14px 16px;    /* Inre marginal */
+  border-radius: 10px;   /* Rundade hörn */
+  border: 1px solid #ccc;   /* Ljusgrå kant */
+  font-family: inherit;   /* Samma font som body */
+  font-size: 1rem;   /* Normal textstorlek */
+  transition: border-color 0.3s, box-shadow 0.3s;    /* Smidig animation vid fokus */
+}
+
+.contact-form textarea {
+  min-height: 140px;   /* Höjd på textområdet */
+  resize: vertical;  /* Användaren kan ändra höjden, inte bredden */
+}
+
+/* Focus */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;    /* Tar bort standardfokus */
+  border-color: #e91e63;   /* Rosa kant vid fokus */
+  box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.15);    /* Lätt skugga runt fältet vid fokus */
+}
+
+/* BUTTON */
+.contact-form button {
+  width: 100%;  /* Knappen fyller hela bredden */
+  margin-top: 10px;   /* Avstånd ovanför knappen */
+  padding: 15px;   /* Inre marginal */
+  border-radius: 10px;   /* Rundade hörn */
+  border: none;    /* Ingen kant */
+  background-color: #e91e63;  /* Rosa bakgrund */
+  color: #fff;   /* Vit text */
+  font-size: 1.05rem;    /* Textstorlek */
+  font-weight: bold;   /* Fet text */
+  cursor: pointer;   /* Pekarhand vid hovring */
+  transition: transform 0.2s, background-color 0.3s;    /* Smidig animation vid hovring */
+}
+
+.contact-form button:hover {
+  background-color: #c2185b;   /* Mörkare rosa vid hovring */
+  transform: translateY(-2px);    /* Lyfter knappen lite */
+}
+
+/* =========================
+   INFO SECTION
+========================= */
+
+.contact-info {
+  flex: 1;   /* Tar upp lika mycket plats som formuläret */
+  background-color: #fff;   /* Vit bakgrund */
+  padding: 40px;   /* Inre marginal */
+  border-radius: 18px;   /* Rundade hörn */
+  box-shadow: 0 20px 40px rgba(0,0,0,0.06);   /* Lätt skugga */
+}
+
+.contact-info h2 {
+  margin-bottom: 25px;   /* Avstånd under rubrik */
+  color: #2a2a2a;    /* Mörk rubrikfärg */
+  font-size: 1.9rem;   /* Rubrikstorlek */
+}
+
+.contact-info p {
+  background-color: #ffe4e1;   /* Ljusrosa bakgrund */
+  padding: 18px 20px;   /* Inre marginal */
+  border-left: 5px solid #e91e63;   /* Rosa kantlinje */
+  border-radius: 10px;   /* Rundade hörn */
+  margin-bottom: 18px;    /* Avstånd under stycke */
+  font-size: 0.95rem;   /* Textstorlek */
+  line-height: 1.6;   /* Radavstånd */
+  color: #444;   /* Textfärg */
+}
+
+.contact-info strong {
+  display: block;    /* Visas på egen rad */
+  margin-bottom: 6px;   /* Avstånd under */
+  color: #c2185b;   /* Rosa färg för viktiga ord */
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;   /* Staplar formulär och info vertikalt */
+    margin: 50px auto;    /* Minskat avstånd ovan och under */
+  }
+
+  .contact-form-section,
+  .contact-info {
+    padding: 30px;   /* Minskat padding på mobil */
+  }
+
+  .contact-info h2 {
+    text-align: center;   /* Centrerar rubrik på mobil */
+  }
+}
+

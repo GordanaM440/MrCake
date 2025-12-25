@@ -1,0 +1,115 @@
+<!DOCTYPE html>   <!-- Anger att dokumentet använder HTML5-standarden -->
+
+<html lang="sv">  <!-- Start på HTML-dokumentet, lang="sv" betyder att språket är svenska -->
+
+<head>    <!-- Head innehåller metadata (information om sidan) -->
+
+  <meta charset="UTF-8">    <!-- Anger teckenkodning, UTF-8 stödjer svenska tecken som å, ä, ö -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">    <!-- Gör sidan responsiv så den fungerar bra på mobil och surfplatta -->
+
+  <title>Mr Cake – Sweet Creations</title>    <!-- Titel som visas i webbläsarens flik -->
+
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">    <!-- Laddar in typsnittet Montserrat från Google Fonts -->
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">    <!-- Länkar till extern CSS-fil för sidans design -->
+</head>
+
+<body>  <!-- Body innehåller allt som visas på webbsidan -->
+
+<!-- HEADER -->
+<header class="site-header">    <!-- Sidhuvud, används ofta för logotyp och navigation -->
+
+  <nav class="navbar">      <!-- Navigeringsmeny -->
+
+    <a href="index.html" class="brand">      <!-- Länk till startsidan -->
+
+      <img src="images/logo.png" alt="MrCake Logo" class="logo">  <!-- Logotypbild med alternativ text -->
+    </a>
+
+    <ul class="nav-links">      <!-- Oordnad lista för navigeringslänkar -->
+
+      <li><a href="index.html">Home</a></li>       <!-- Länk till startsidan -->
+
+      <li><a href="about.html">About</a></li>     <!-- Länk till Om oss-sidan -->
+
+      <li><a href="products.html">Products</a></li>    <!-- Länk till produktsidan -->
+
+      <li><a href="contact.html">Contact</a></li>    <!-- Länk till kontaktsidan -->
+
+      <li><a href="sweet_christmas.html">Sweet Christmas</a></li>    <!-- Länk till julspecial-sidan -->
+    </ul>
+  </nav>
+</header>
+
+<!-- MAIN -->
+<main>  <!-- Huvudinnehållet på sidan -->
+
+  <!-- HERO -->
+  <section class="hero">   <!-- Hero-sektion, oftast första stora synliga delen -->
+
+    <div class="container">    <!-- Wrapper som håller innehållet centrerat -->
+
+      <h1> Välkommen till MR CAKE</h1>   <!-- Huvudrubrik -->
+
+      <p>
+        <!-- Textstycke med introduktion -->
+        Välkommen till vår söta värld.  
+        MR CAKE är ett gäng passionerade konditorer som älskar hantverket.
+        Vi jobbar med noggrant utvalda råvaror där kvalitet och smak alltid står i fokus.
+      </p>
+    </div>
+  </section>
+
+  <!-- TORTA IMAGE -->
+  <section class="torta-section">   <!-- Sektion för bild -->
+
+    <div class="torta-img">      <!-- Behållare för bilden -->
+
+      <img src="images/torta.png" alt="Torta från Mr Cake">    <!-- Bild på tårta med alternativ text -->
+    </div>
+  </section>
+  
+
+ <!-- NEWSLETTER -->
+    <section class="subscribe-section">
+      <h2>Prenumerera på vårt nyhetsbrev</h2>
+      <p>Få nyheter och erbjudanden direkt i din inkorg</p>
+      <form id="subscribeForm" class="subscribe-form" novalidate>
+        <input type="email" name="email" placeholder="Din e-postadress">
+        <button type="submit">Prenumerera</button>
+        <div id="formMessage" class="form-message"></div>
+      </form>
+    </section>
+
+
+
+</main>
+
+<!-- FOOTER -->
+<footer> <!-- Sidfot -->
+
+  <p>Follow us:</p>   <!-- Text i footern -->
+
+  <div class="social-links">     <!-- Länkar till sociala medier -->
+
+    <a href="https://www.instagram.com/munamii.cakery/" target="_blank">Instagram</a> |
+    <!-- Instagram-länk, öppnas i ny flik -->
+
+    <a href="https://www.facebook.com/munamiicupcakes" target="_blank">Facebook</a> |
+    <!-- Facebook-länk -->
+
+    <a href="mailto:infomunamii@gmail.com">Email</a>    <!-- Klickbar e-postlänk -->
+  </div>
+
+  <span class="copyright">     <!-- Copyright-information -->
+    © 2025 MR Cake AB
+  </span>
+</footer>
+
+<script src="js/script.js"></script> <!-- Länkar till JavaScript-fil -->
+
+</body>
+</html>
